@@ -1,0 +1,16 @@
+load:
+	set gamerule doFireTick of world "world" to false
+	set gamerule announceAdvancements of world "world" to false
+	set gamerule doMobSpawning of world "world" to false
+	set gamerule doWeatherCycle of world "world" to false
+	set gamerule doDaylightCycle of world "world" to false
+	set gamerule showDeathMessages of world "world" to false
+	set gamerule doTileDrops of world "world" to false
+	set gamerule doImmediateRespawn of world "world" to true
+	set gamerule naturalRegeneration of world "world" to false
+	set gamerule doMobLoot of world "world" to false
+	set gamerule keepInventory of world "world" to true
+	set gamerule doEntityDrops of world "world" to false
+	set gamerule randomTickSpeed of world "world" to 0
+	set gamerule doTraderSpawning of world "world" to false
+	

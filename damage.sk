@@ -1,0 +1,8 @@
+damage of player:
+	attacker is online
+	cancel event
+
+damage of player:
+	if damage cause is fall:
+		if {game::%victim%} is 1,2,3,4 or 5:
+			cancel event

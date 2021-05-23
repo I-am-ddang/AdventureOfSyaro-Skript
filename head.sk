@@ -1,0 +1,18 @@
+right click on player head:
+	send "%location of block%" to player
+	if "%location of block%" is "x: -31.5, y: 20.5, z: 35.5":
+		send "&7이름 모를 현자의 혼: 영어 1단어 입니다." to player
+	if "%location of block%" is "x: -31.5, y: 18.5, z: 35.5":
+		send "&7이름 모를 현자의 혼: R" to player
+	if "%location of block%" is "x: -30.5, y: 9.5, z: 17.5":
+		send "&7이름 모를 현자의 혼: E" to player
+	if "%location of block%" is "x: -15.5, y: 5.5, z: 19.5":
+		send "&7이름 모를 현자의 혼: A" to player
+	if "%location of block%" is "x: -12.5, y: 3.5, z: 30.5":
+		send "&7이름 모를 현자의 혼: D" to player
+	if "%location of block%" is "x: -12.5, y: 3.5, z: 34.5":
+		send "&7이름 모를 현자의 혼: Y" to player
+	if "%location of block%" is "x: -11.5, y: 14.5, z: 16.5":
+		send "&7이름 모를 현자의 혼: 현자의 혼은 총 8개가 있습니다." to player
+	if "%location of block%" is "x: -11.5, y: 7.5, z: 16.5":
+		send "&7이름 모를 현자의 혼: 한국어로는 ㅂ을 포함합니다." to player

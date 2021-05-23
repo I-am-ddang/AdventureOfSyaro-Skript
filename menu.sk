@@ -1,0 +1,29 @@
+swap item:
+	set {_a} to chest inventory with 3 rows named "무엇을 할까?"
+	if {item::%player%::*} is not set:
+		set slot 13 of {_a} to barrier named "&c음.." with lore "&7아직 아무것도 할 게 없어요"
+	if {item::%player%::1::0} is true:
+		set slot 10 of {_a} to filled map named "&a여행용 지도" with lore "&8중요한 물건" and "" and "&7가고 싶은 곳을 알아보기에 적당한 지도다." and "" and "&e클릭시 지도를 봅니다."
+	open {_a} to player
+
+inventory click:
+	if name of top inventory of player is "무엇을 할까?":
+		cancel event
+		if name of clicked slot is "&a여행용 지도":
+			set {_a} to chest inventory with 1 rows named "어디를 갈까?"
+			set slot 1 of {_a} to grass block named "&a평범한 초원" with lore "&7도서관 바로 앞에도 있는 평범한 초원입니다."
+			set slot 3,5 and 7 of {_a} to iron bars named "&c찾지 못한 지역" with lore "&7아직 찾지 못한 지역입니다."
+			if {item::%player%::1::1} is true:
+				set slot 3 of {_a} to purple terracotta named "&a폐허" with lore "&7이제는 발길이 닿지 않는 외딴 지역입니다."
+			if {item::%player%::1::2} is true:
+				set slot 5 of {_a} to pufferfish named "&a현자 복어의 집" with lore "&7아주 현명한 현자 복어가 살고 있는 집입니다."
+			if {item::%player%::1::3} is true:
+				set slot 7 of {_a} to white concrete named "&a괴도 케이꾸의 비밀기지" with lore "&7복잡한 퍼즐이 존재하는 괴도 케이꾸의 비밀기지입니다."
+			open {_a} to player
+	if name of top inventory of player is "어디를 갈까?":
+		cancel event
+		if name of clicked slot is "&a평범한 초원":
+			teleport player to location(-55.5, 9.5, -12.5, player's world, 0.8, 3.6)
+			if {game::%player%} is 5:
+				set {game::%player%} to 6
+			send title ":: 평범한 초원 ::" with subtitle "" to player for 2 seconds

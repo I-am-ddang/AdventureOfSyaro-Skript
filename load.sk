@@ -1,0 +1,9 @@
+load:
+	broadcast "&a샤로의 모험이 정상적으로 가동합니다."
+
+join:
+	{game::%player%} is not set
+	teleport player to location(0.5, 10.5, 0.5, player's world, 0.8, 0.6)
+
+food bar change:
+	set food level of player to 5

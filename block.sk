@@ -1,0 +1,11 @@
+break:
+	if player is op:
+		stop
+	if metadata tag "new" of block is set:
+		stop
+	cancel event
+
+
+place:
+	{game::%player%} is set
+	set metadata tag "new" of block to true

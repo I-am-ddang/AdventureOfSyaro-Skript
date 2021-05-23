@@ -1,0 +1,29 @@
+chat:
+	if {game::%player%} is 4:
+		if message is "ready" or "READY":
+			cancel event
+			story4(player)
+
+function story4(p: player):
+	set {game::%{_p}%} to 5
+	teleport {_p} to location(19.5, 8.5, 24.5, {_p}'s world, -102.5, -2.5)
+	send "&6정답을 맞춰 수수께끼의 방에서 나왔습니다!" to {_p}
+	wait 2 seconds
+	send "&f할아버지: 그래 좋다 마법이 걸린 케이크를 찾으러 가거라" to {_p}
+	play sound "block.note_block.pling" at pitch 2 for {_p}
+	wait 4 seconds
+	send "&f할아버지: 마법이 걸린 케이크는 괴도 케이꾸의 비밀기지 맨 아래층에 있단다." to {_p}
+	play sound "block.note_block.pling" at pitch 2 for {_p}
+	wait 4 seconds
+	send "&f할아버지: 비밀기지까지 가는데 많은 퍼즐이 기다릴거야 잘 헤쳐나가도록 해라" to {_p}
+	play sound "block.note_block.pling" at pitch 2 for {_p}
+	wait 4 seconds
+	send "&7여행용 지도를 받았다! 메뉴 > 중요한 물건에서 확인해보자." to {_p}
+	set {item::%{_p}%::1::0} to true
+	play sound "block.note_block.pling" at pitch 2 for {_p}
+	wait 4 seconds
+	send "&f할아버지: 무사히 잘 다녀오렴 기다리고 있으마 힘들땐 돌아와도 좋아" to {_p}
+	play sound "block.note_block.pling" at pitch 2 for {_p}
+	wait 4 seconds
+	send "&6여행용 지도를 사용해 이야기를 진행해주세요" to {_p}
+	play sound "block.note_block.pling" at pitch 2 for {_p}
