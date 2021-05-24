@@ -1,0 +1,44 @@
+step on red terracotta:
+	damage player by 3
+	teleport player to location(-55.5, 9.5, -12.5, player's world, 0.8, 3.6)
+
+step on red stained glass or orange stained glass:
+	damage player by 3
+	teleport player to location(-77.5, 12.5, -15.5, player's world, -1, 1)
+
+step on bedrock:
+	damage player by 1
+
+step on cyan terracotta:
+	if "%location of block%" is "x: -55.5, y: 4.5, z: -13.5":
+		teleport player to location(-77.5, 12.5, -15.5, player's world)
+	if "%location of block%" is "x: -76.5, y: 13.5, z: 67.5":
+		teleport player to location(-47.5, 9.5, 145.5, player's world, 90.4, 27.0)
+
+step on beacon:
+	send "%location of block%" to player
+	if "%location of block%" is "x: -55.5, y: 6.5, z: 146.5":
+		teleport player to location(23.5, 7.5, 31.5, player's world, 89.5, 4.5)
+		send title ":: 도서관 ::" with subtitle "" to player for 2 seconds
+		if {game::%player%} is 6:
+			set {game::%player%} to 7
+			send "&6평범한 초원을 클리어 했습니다!" to player
+			wait 2 seconds
+			send "&f샤로: 할아버지! 평범한 초원을 가봤어요!" to player
+			play sound "block.note_block.pling" at pitch 2 for player
+			wait 4 seconds
+			send "&f할아버지: 오오 대견하구나.. 평범한 초원이라.. 움직이는 기반암을 만났겠구나" to player
+			play sound "block.note_block.pling" at pitch 2 for player
+			wait 4 seconds
+			send "&f샤로: 네 그리고 잘 이겨내서 다시 왔어요." to player
+			play sound "block.note_block.pling" at pitch 2 for player
+			wait 4 seconds
+			send "&7여행용 지도의 다음 지역이 그려진다. 메뉴에서 확인하자." to player
+			set {item::%player%::1::1} to true
+			play sound "block.note_block.pling" at pitch 2 for player
+			wait 4 seconds
+			send "&f할아버지: 다음 여행도 무사히 잘 다녀오렴 기다리고 있으마 힘들땐 돌아와도 좋아" to player
+			play sound "block.note_block.pling" at pitch 2 for player
+			wait 4 seconds
+			send "&6여행용 지도를 사용해 이야기를 진행해주세요" to player
+			play sound "block.note_block.pling" at pitch 2 for player

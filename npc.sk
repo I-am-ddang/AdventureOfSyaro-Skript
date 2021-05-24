@@ -1,0 +1,25 @@
+right click on entity:
+	if name of entity is "책 읽는 아기 돼지":
+		set {_i} to random integer between 1 and 5
+		if {_i} is 1:
+			send "&7책 읽는 아기 돼지: 아기 돼지 삼형제 이야기 정말 재밌지 않니?" to player
+		else if {_i} is 2:
+			send "&7책 읽는 아기 돼지: 옛날 옛적에 아기 돼지 삼형제가 살았습니다~" to player
+		else if {_i} is 3:
+			send "&7책 읽는 아기 돼지: 늑대가 셋째 돼지의 집을 후하고 불었지만 집은 그떡 없었어요" to player
+		else if {_i} is 4:
+			send "&7책 읽는 아기 돼지: 셋째 돼지는 야구 방망이를 들고 늑대를 쫓았어요" to player
+		else if {_i} is 5:
+			send "&7책 읽는 아기 돼지: 건초 더미로 집을 지은 첫째 돼지의 집은 날아가버렸어요!" to player
+	if name of entity is "도서관 사서":
+		set {_i} to random integer between 1 and 5
+		if {_i} is 1:
+			send "&7도서관 사서: 할아버지께서 이번엔 200권을 가져오셨네요! 어서 읽어봐요" to player
+		else if {_i} is 2:
+			send "&7도서관 사서: 오늘도 정리해야할 책이 산더미네요! 아주 기분이 좋아요!" to player
+		else if {_i} is 3:
+			send "&7도서관 사서: 용사 얌얌은 진짜 전설이다.. 내가 알던 그 얌얌이 맞나?" to player
+		else if {_i} is 4:
+			send "&7도서관 사서: 책은 아주 훌륭한 둔기로 사용될 수 있습니다." to player
+		else if {_i} is 5:
+			send "&7도서관 사서: 이번 신간은 아주 인기가 많네요!" to player

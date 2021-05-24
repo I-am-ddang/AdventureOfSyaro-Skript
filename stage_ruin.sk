@@ -1,0 +1,355 @@
+command /a:
+	trigger:
+		send "%type of target block%" to player
+
+right click on lodestone:
+	play sound "block.stone_button.click_on" at pitch 2 for player
+	set {_a1} to location -94.5, 14.5, 28.5 "world"
+	set {_a2} to location -95.5, 14.5, 28.5 "world"
+	set {_a3} to location -96.5, 14.5, 28.5 "world"
+	set {_a4} to location -97.5, 14.5, 28.5 "world"
+	set {_a5} to location -98.5, 14.5, 28.5 "world"
+
+	set {_b1} to location -94.5, 14.5, 27.5 "world"
+	set {_b2} to location -95.5, 14.5, 27.5 "world"
+	set {_b3} to location -96.5, 14.5, 27.5 "world"
+	set {_b4} to location -97.5, 14.5, 27.5 "world"
+	set {_b5} to location -98.5, 14.5, 27.5 "world"
+
+	set {_c1} to location -94.5, 14.5, 26.5 "world"
+	set {_c2} to location -95.5, 14.5, 26.5 "world"
+	set {_c3} to location -96.5, 14.5, 26.5 "world"
+	set {_c4} to location -97.5, 14.5, 26.5 "world"
+	set {_c5} to location -98.5, 14.5, 26.5 "world"
+
+	set {_d1} to location -94.5, 14.5, 25.5 "world"
+	set {_d2} to location -95.5, 14.5, 25.5 "world"
+	set {_d3} to location -96.5, 14.5, 25.5 "world"
+	set {_d4} to location -97.5, 14.5, 25.5 "world"
+	set {_d5} to location -98.5, 14.5, 25.5 "world"
+
+	set {_e1} to location -94.5, 14.5, 24.5 "world"
+	set {_e2} to location -95.5, 14.5, 24.5 "world"
+	set {_e3} to location -96.5, 14.5, 24.5 "world"
+	set {_e4} to location -97.5, 14.5, 24.5 "world"
+	set {_e5} to location -98.5, 14.5, 24.5 "world"
+
+	#! 오른쪽으로 당기기
+
+	if "%location of block%" is "x: -99.5, y: 14.5, z: 28.5":
+		set {sel1} to type of block at {_a1}
+		set {sel2} to type of block at {_a2}
+		set {sel3} to type of block at {_a3}
+		set {sel4} to type of block at {_a4}
+		set {sel5} to type of block at {_a5}
+		set block at {_a1} to {sel5}
+		set block at {_a2} to {sel1}
+		set block at {_a3} to {sel2}
+		set block at {_a4} to {sel3}
+		set block at {_a5} to {sel4}
+	if "%location of block%" is "x: -99.5, y: 14.5, z: 27.5":
+		set {sel1} to type of block at {_b1}
+		set {sel2} to type of block at {_b2}
+		set {sel3} to type of block at {_b3}
+		set {sel4} to type of block at {_b4}
+		set {sel5} to type of block at {_b5}
+		set block at {_b1} to {sel5}
+		set block at {_b2} to {sel1}
+		set block at {_b3} to {sel2}
+		set block at {_b4} to {sel3}
+		set block at {_b5} to {sel4}
+	if "%location of block%" is "x: -99.5, y: 14.5, z: 26.5":
+		set {sel1} to type of block at {_c1}
+		set {sel2} to type of block at {_c2}
+		set {sel3} to type of block at {_c3}
+		set {sel4} to type of block at {_c4}
+		set {sel5} to type of block at {_c5}
+		set block at {_c1} to {sel5}
+		set block at {_c2} to {sel1}
+		set block at {_c3} to {sel2}
+		set block at {_c4} to {sel3}
+		set block at {_c5} to {sel4}
+	if "%location of block%" is "x: -99.5, y: 14.5, z: 25.5":
+		set {sel1} to type of block at {_d1}
+		set {sel2} to type of block at {_d2}
+		set {sel3} to type of block at {_d3}
+		set {sel4} to type of block at {_d4}
+		set {sel5} to type of block at {_d5}
+		set block at {_d1} to {sel5}
+		set block at {_d2} to {sel1}
+		set block at {_d3} to {sel2}
+		set block at {_d4} to {sel3}
+		set block at {_d5} to {sel4}
+	if "%location of block%" is "x: -99.5, y: 14.5, z: 24.5":
+		set {sel1} to type of block at {_e1}
+		set {sel2} to type of block at {_e2}
+		set {sel3} to type of block at {_e3}
+		set {sel4} to type of block at {_e4}
+		set {sel5} to type of block at {_e5}
+		set block at {_e1} to {sel5}
+		set block at {_e2} to {sel1}
+		set block at {_e3} to {sel2}
+		set block at {_e4} to {sel3}
+		set block at {_e5} to {sel4}
+
+	#! 왼쪽으로 당기기
+
+	if "%location of block%" is "x: -93.5, y: 14.5, z: 28.5":
+		set {sel1} to type of block at {_a1}
+		set {sel2} to type of block at {_a2}
+		set {sel3} to type of block at {_a3}
+		set {sel4} to type of block at {_a4}
+		set {sel5} to type of block at {_a5}
+		set block at {_a1} to {sel2}
+		set block at {_a2} to {sel3}
+		set block at {_a3} to {sel4}
+		set block at {_a4} to {sel5}
+		set block at {_a5} to {sel1}
+	if "%location of block%" is "x: -93.5, y: 14.5, z: 27.5":
+		set {sel1} to type of block at {_b1}
+		set {sel2} to type of block at {_b2}
+		set {sel3} to type of block at {_b3}
+		set {sel4} to type of block at {_b4}
+		set {sel5} to type of block at {_b5}
+		set block at {_b1} to {sel2}
+		set block at {_b2} to {sel3}
+		set block at {_b3} to {sel4}
+		set block at {_b4} to {sel5}
+		set block at {_b5} to {sel1}
+	if "%location of block%" is "x: -93.5, y: 14.5, z: 26.5":
+		set {sel1} to type of block at {_c1}
+		set {sel2} to type of block at {_c2}
+		set {sel3} to type of block at {_c3}
+		set {sel4} to type of block at {_c4}
+		set {sel5} to type of block at {_c5}
+		set block at {_c1} to {sel2}
+		set block at {_c2} to {sel3}
+		set block at {_c3} to {sel4}
+		set block at {_c4} to {sel5}
+		set block at {_c5} to {sel1}
+	if "%location of block%" is "x: -93.5, y: 14.5, z: 25.5":
+		set {sel1} to type of block at {_d1}
+		set {sel2} to type of block at {_d2}
+		set {sel3} to type of block at {_d3}
+		set {sel4} to type of block at {_d4}
+		set {sel5} to type of block at {_d5}
+		set block at {_d1} to {sel2}
+		set block at {_d2} to {sel3}
+		set block at {_d3} to {sel4}
+		set block at {_d4} to {sel5}
+		set block at {_d5} to {sel1}
+	if "%location of block%" is "x: -93.5, y: 14.5, z: 24.5":
+		set {sel1} to type of block at {_e1}
+		set {sel2} to type of block at {_e2}
+		set {sel3} to type of block at {_e3}
+		set {sel4} to type of block at {_e4}
+		set {sel5} to type of block at {_e5}
+		set block at {_e1} to {sel2}
+		set block at {_e2} to {sel3}
+		set block at {_e3} to {sel4}
+		set block at {_e4} to {sel5}
+		set block at {_e5} to {sel1}
+
+	#! 위로 올리기
+
+	if "%location of block%" is "x: -94.5, y: 14.5, z: 29.5":
+		set {sel1} to type of block at {_a1}
+		set {sel2} to type of block at {_b1}
+		set {sel3} to type of block at {_c1}
+		set {sel4} to type of block at {_d1}
+		set {sel5} to type of block at {_e1}
+		set block at {_e1} to {sel1}
+		set block at {_a1} to {sel2}
+		set block at {_b1} to {sel3}
+		set block at {_c1} to {sel4}
+		set block at {_d1} to {sel5}
+	if "%location of block%" is "x: -95.5, y: 14.5, z: 29.5":
+		set {sel1} to type of block at {_a2}
+		set {sel2} to type of block at {_b2}
+		set {sel3} to type of block at {_c2}
+		set {sel4} to type of block at {_d2}
+		set {sel5} to type of block at {_e2}
+		set block at {_e2} to {sel1}
+		set block at {_a2} to {sel2}
+		set block at {_b2} to {sel3}
+		set block at {_c2} to {sel4}
+		set block at {_d2} to {sel5}
+	if "%location of block%" is "x: -96.5, y: 14.5, z: 29.5":
+		set {sel1} to type of block at {_a3}
+		set {sel2} to type of block at {_b3}
+		set {sel3} to type of block at {_c3}
+		set {sel4} to type of block at {_d3}
+		set {sel5} to type of block at {_e3}
+		set block at {_e3} to {sel1}
+		set block at {_a3} to {sel2}
+		set block at {_b3} to {sel3}
+		set block at {_c3} to {sel4}
+		set block at {_d3} to {sel5}
+	if "%location of block%" is "x: -97.5, y: 14.5, z: 29.5":
+		set {sel1} to type of block at {_a4}
+		set {sel2} to type of block at {_b4}
+		set {sel3} to type of block at {_c4}
+		set {sel4} to type of block at {_d4}
+		set {sel5} to type of block at {_e4}
+		set block at {_e4} to {sel1}
+		set block at {_a4} to {sel2}
+		set block at {_b4} to {sel3}
+		set block at {_c4} to {sel4}
+		set block at {_d4} to {sel5}
+	if "%location of block%" is "x: -98.5, y: 14.5, z: 29.5":
+		set {sel1} to type of block at {_a5}
+		set {sel2} to type of block at {_b5}
+		set {sel3} to type of block at {_c5}
+		set {sel4} to type of block at {_d5}
+		set {sel5} to type of block at {_e5}
+		set block at {_e5} to {sel1}
+		set block at {_a5} to {sel2}
+		set block at {_b5} to {sel3}
+		set block at {_c5} to {sel4}
+		set block at {_d5} to {sel5}
+
+	#! 아래로 내리기
+
+	if "%location of block%" is "x: -94.5, y: 14.5, z: 23.5":
+		set {sel1} to type of block at {_a1}
+		set {sel2} to type of block at {_b1}
+		set {sel3} to type of block at {_c1}
+		set {sel4} to type of block at {_d1}
+		set {sel5} to type of block at {_e1}
+		set block at {_a1} to {sel5}
+		set block at {_b1} to {sel1}
+		set block at {_c1} to {sel2}
+		set block at {_d1} to {sel3}
+		set block at {_e1} to {sel4}
+	if "%location of block%" is "x: -95.5, y: 14.5, z: 23.5":
+		set {sel1} to type of block at {_a2}
+		set {sel2} to type of block at {_b2}
+		set {sel3} to type of block at {_c2}
+		set {sel4} to type of block at {_d2}
+		set {sel5} to type of block at {_e2}
+		set block at {_a2} to {sel5}
+		set block at {_b2} to {sel1}
+		set block at {_c2} to {sel2}
+		set block at {_d2} to {sel3}
+		set block at {_e2} to {sel4}
+	if "%location of block%" is "x: -96.5, y: 14.5, z: 23.5":
+		set {sel1} to type of block at {_a3}
+		set {sel2} to type of block at {_b3}
+		set {sel3} to type of block at {_c3}
+		set {sel4} to type of block at {_d3}
+		set {sel5} to type of block at {_e3}
+		set block at {_a3} to {sel5}
+		set block at {_b3} to {sel1}
+		set block at {_c3} to {sel2}
+		set block at {_d3} to {sel3}
+		set block at {_e3} to {sel4}
+	if "%location of block%" is "x: -97.5, y: 14.5, z: 23.5":
+		set {sel1} to type of block at {_a4}
+		set {sel2} to type of block at {_b4}
+		set {sel3} to type of block at {_c4}
+		set {sel4} to type of block at {_d4}
+		set {sel5} to type of block at {_e4}
+		set block at {_a4} to {sel5}
+		set block at {_b4} to {sel1}
+		set block at {_c4} to {sel2}
+		set block at {_d4} to {sel3}
+		set block at {_e4} to {sel4}
+	if "%location of block%" is "x: -98.5, y: 14.5, z: 23.5":
+		set {sel1} to type of block at {_a5}
+		set {sel2} to type of block at {_b5}
+		set {sel3} to type of block at {_c5}
+		set {sel4} to type of block at {_d5}
+		set {sel5} to type of block at {_e5}
+		set block at {_a5} to {sel5}
+		set block at {_b5} to {sel1}
+		set block at {_c5} to {sel2}
+		set block at {_d5} to {sel3}
+		set block at {_e5} to {sel4}
+
+	if "%block at {_a1}%","%block at {_a2}%","%block at {_a3}%","%block at {_a4}%","%block at {_a5}%","%block at {_e1}%","%block at {_e2}%","%block at {_e3}%","%block at {_e4}%","%block at {_e5}%","%block at {_b1}%","%block at {_c1}%","%block at {_d1}%","%block at {_b5}%","%block at {_c5}%" and "%block at {_d5}%" is "quartz brick":
+		if "%block at {_b2}%","%block at {_b4}%","%block at {_d2}%" and "%block at {_d4}%" is "prismarine brick":
+			if "%block at {_b3}%","%block at {_c2}%","%block at {_c4}%" and "%block at {_d3}%" is "dark prismarine block":
+				if "%block at {_c3}%" is "sea lantern":
+					send "&7덜컹하는 소리와 함께 문이 열렸다." to players
+					set block at location -93.5, 15.5, 32.5 "world" to air
+					set block at location -93.5, 16.5, 32.5 "world" to air
+					set block at location -99.5, 15.5, 32.5 "world" to air
+					set block at location -99.5, 16.5, 32.5 "world" to air
+
+
+
+click on shulker box:
+	if "%location of block%" is "x: -96.5, y: 3.5, z: -13.5":
+		if {door::%player%} is not set:
+			set {door::%player%} to true
+			play sound "block.wooden_door.open" for player
+			send "&7문이 열렸다." to player
+
+right click on crimson door:
+	send "%location of block%" to player
+	if "%location of block%" is "x: -92.5, y: 7.5, z: -16.5" or "x: -92.5, y: 7.5, z: -15.5" or "x: -92.5, y: 6.5, z: -15.5" or "x: -92.5, y: 6.5, z: -16.5":
+		cancel event
+		if {door::%player%} is not set:
+			if {stop::%player%} is true:
+				stop
+			set {stop::%player%} to true
+			send "&7문이 굳게 잠겨 있다. 문에는 셜커 상자를 열면 열린다고 적혀져있다."
+			wait 1 seconds
+			send "&7셜커 상자..? 책에서 읽은 바로는 보랏빛이 도는 상자를 말하던데.. 찾아보자"
+			clear {stop::%player%}
+			stop
+		teleport player to location(-96.5, 15.5, -8.5, player's world, 0.9, 1.8)
+
+
+step on red carpet:
+	if "%block 0.5 under block%" is not "magenta stained hardened clay":
+		apply blindness to player for 1 seconds replacing existing effect
+		teleport player to location(-96.5, 1.5, -7.5, player's world, 6.5, 16.5) 
+
+left click on red carpet:
+	if player is op:
+		stop
+	if {game::%player%} is 8:
+		open chest inventory with 1 rows named "열 수 없다" to player
+		close player's inventory
+
+step on beacon:
+	"%location of block%" is "x: -96.5, y: 14.5, z: 15.5"
+	teleport player to location(-96.5, 15.5, 17.5, player's world, -0.1, -4.1)
+
+step on purple wool:
+	apply jump boost 4 to player for 3 seconds replacing existing effect
+
+every 2.5 seconds:
+	if block at location -95.5, 17.5, 39.5 "world" is not air:
+		set block at location -95.5, 17.5, 39.5 "world" to air
+		set block at location -97.5, 21.5, 47.5 "world" to air
+	else:
+		set block at location -95.5, 17.5, 39.5 "world" to white wool
+		set block at location -97.5, 21.5, 47.5 "world" to white wool
+
+step on prismarine:
+	teleport player to location(23.5, 7.5, 31.5, player's world, 89.5, 4.5)
+	send title ":: 도서관 ::" with subtitle "" to player for 2 seconds
+	if {game::%player%} is 8:
+		set {game::%player%} to 9
+		send "&6폐허를 클리어 했습니다!" to player
+		wait 2 seconds
+		send "&f샤로: 할아버지! 폐허를 가봤어요! 하지만 아직도 괴도 케이꾸의 비밀기지가 어딘진 모르겠어요" to player
+		play sound "block.note_block.pling" at pitch 2 for player
+		wait 4 seconds
+		send "&f할아버지: 오오 대견하구나.. 폐허라.. 빨간 양탄자 길을 풀어야했겠구나" to player
+		play sound "block.note_block.pling" at pitch 2 for player
+		wait 4 seconds
+		send "&f샤로: 네 그리고 잘 이겨내서 다시 왔어요." to player
+		play sound "block.note_block.pling" at pitch 2 for player
+		wait 4 seconds
+		send "&7여행용 지도의 다음 지역이 그려진다. 메뉴에서 확인하자." to player
+		set {item::%player%::1::2} to true
+		play sound "block.note_block.pling" at pitch 2 for player
+		wait 4 seconds
+		send "&f할아버지: 다음 여행도 무사히 잘 다녀오렴 기다리고 있으마 힘들땐 돌아와도 좋아" to player
+		play sound "block.note_block.pling" at pitch 2 for player
+		wait 4 seconds
+		send "&6여행용 지도를 사용해 이야기를 진행해주세요" to player
+		play sound "block.note_block.pling" at pitch 2 for player

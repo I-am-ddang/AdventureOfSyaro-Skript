@@ -1,0 +1,78 @@
+right click on sign:
+	cancel event
+	if line 1 is "규칙 및 조작 확인":
+		loop 100 times:
+			send "" to player
+		send "&6규칙 및 조작 확인" to player
+		send "&f1. 이미 만들어진 블록을 부술 수 없습니다." to player
+		send "&f2. 체력이 0 이 되면 게임 오버 됩니다. 게임 오버시 샤로의 방에서 재시작합니다." to player 
+		send "&f3. 게임 진행과정은 자동 저장되며 플러그인의 내부 파일을 건들지 않는 이상 큰 문제는 없습니다." to player
+		send "&f4. 다른 플레이어를 공격할 수 없습니다. 간접적으로 미는 행위는 막아두지 않았습니다." to player
+		send "&c5. 체력은 자연 회복되지 않습니다. 회복 물품을 사용해야합니다." to player	
+		send "&f6. 손 바꾸기 키를 누르면 (기본 F) 메뉴 창이 나옵니다." to player
+	else if line 1 is "게임 시작":
+		teleport player to location(11.5, 10.5, -0.5, player's world, -0.2, 2.2)
+		loop 100 times:
+			send "" to player
+		clear {item::%player%::*}
+		clear {game::%player%}
+		clear {jelly::%player%}
+		story1(player)
+	else if line 1 is "크레딧 보기":
+		set {_a} to chest inventory with 1 rows named "크레딧"
+		set slot 0 of {_a} to head of "DDang_" parsed as offlineplayer named "&a총괄 DDang_" with lore "&f  개발 주도" and "&f  기획 주도" and "&f  샤로의 모험 프로젝트 총괄"
+		set slot 1 of {_a} to head of "_Syaro" parsed as offlineplayer named "&a주인공 _Syaro" with lore "&f  5월 22일 생일을 축하한 기념으로 이 콘텐츠를" and "&f  만들게 한 장본인"
+		set slot 2 of {_a} to head of "Anyspy_" parsed as offlineplayer named "&aAnyspy_" with lore "&f  괴도 케이꾸의 비밀기지 외관 건축" and "&f  현자 복어의 집 건축"
+		set slot 3 of {_a} to head of "KS_H" parsed as offlineplayer named "&aKS_H" with lore "&f  Anyspy_와 함께 건축을 도움"
+		set slot 4 of {_a} to head of "n_cake" parsed as offlineplayer named "&an_cake" with lore "&f  괴도 케이꾸 아이디어 제공" and "&f  마법이 걸린 케이크 아이디어 제공"
+		set slot 5 of {_a} to head of "gangjisu123" parsed as offlineplayer named "&aGangjisu123" with lore "&f  평범한 초원길 검수" and "&f  제작 보조"
+		set slot 6 of {_a} to head of "siyun1211" parsed as offlineplayer named "&asiyun1211" with lore "&f  할아버지의 수수께끼방 장식을 맡음" and "&f  제작 보조"
+		set slot 7 of {_a} to head of "ke_vini" parsed as offlineplayer named "&ake_vini" with lore "&f  할아버지의 수수께끼방 장식을 맡음" and "&f  제작 보조"
+		open {_a} to player
+	else if line 1 is "비석":
+		send "%location of block%" to player
+		if "%location of block%" is "x: -57.5, y: 10.5, z: -12.5":
+			send "&7멀리 가야할 땐 돌아가는 것도 좋은 방법이다." to player
+		if "%location of block%" is "x: -94.5, y: 2.5, z: 15.5":
+			teleport player to location(-96.5, 15.5, -8.5, player's world, 0.9, 1.8)
+
+inventory click:
+	name of player's top inventory is "크레딧"
+	cancel event
+
+function story1(p: player):
+	set {game::%{_p}%} to 1
+	send "&6시놉시스" to {_p}
+	send "&f이 이야기는 모험을 동경하던 한 소년의 이야기이다." to {_p}
+	play sound "block.note_block.pling" at pitch 2 for {_p}
+	wait 4 seconds
+	send "&f주인공 샤로는 어릴적부터 도서관 할아버지에게 길러져 도서관에서 자랐다." to {_p}
+	play sound "block.note_block.pling" at pitch 2 for {_p}
+	wait 4 seconds
+	send "&f샤로는 어릴적부터 총명했으며 도서관에 있는 책들을 대부분 읽었다." to {_p}
+	play sound "block.note_block.pling" at pitch 2 for {_p}
+	wait 4 seconds
+	send "&f내로라하는 명작들도 샤로에겐 그저 동화책 수준의 책일 뿐이었던 것이다!" to {_p}
+	play sound "block.note_block.pling" at pitch 2 for {_p}
+	wait 4 seconds
+	send "&f그렇게 샤로는 날로만 커져갔고 도서관에서만 살아서 그런지 밖으로 나가고 싶어했다." to {_p}
+	play sound "block.note_block.pling" at pitch 2 for {_p}
+	wait 4 seconds
+	send "&f그러던 어느날, 샤로는 금서 책장에서 오래된 책 하나를 발견하게 되었는데.." to {_p}
+	play sound "block.note_block.pling" at pitch 2 for {_p}
+	wait 4 seconds
+	send "&f그 책의 이름은 &6괴도 케이꾸와 마법이 걸린 케이크 &f였다" to {_p}
+	play sound "block.note_block.pling" at pitch 2 for {_p}
+	wait 4 seconds
+	send "&f샤로는 그 책의 첫장을 넘기자마자 감미로운 책의 내용에 이끌려 3일 밤낮동안 그 책을 완독했고" to {_p}
+	play sound "block.note_block.pling" at pitch 2 for {_p}
+	wait 4 seconds
+	send "&f한번도 할아버지의 세계 밖으로 나가본적이 없는 샤로는 마음속으로 굳게 결심했다!" to {_p}
+	play sound "block.note_block.pling" at pitch 2 for {_p}
+	wait 4 seconds
+	send "&f다가오는 15번째 생일날 마법이 걸린 케이크를 먹고야 말겠다는 것을!" to {_p}
+	play sound "block.note_block.pling" at pitch 2 for {_p}
+	wait 4 seconds
+	send "&6진행을 위해 앞에 보이는 문을 열어주세요." to {_p}
+	play sound "block.note_block.pling" at pitch 2 for {_p}
+	set {game::%{_p}%} to 2

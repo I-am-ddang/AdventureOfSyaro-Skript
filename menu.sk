@@ -32,3 +32,36 @@ inventory click:
 			if {game::%player%} is 7:
 				set {game::%player%} to 8
 			send title ":: 폐허 ::" with subtitle "" to player for 2 seconds
+			set block at location -93.5, 15.5, 32.5 "world" to purple terracotta
+			set block at location -93.5, 16.5, 32.5 "world" to purple terracotta
+			set block at location -99.5, 15.5, 32.5 "world" to purple terracotta
+			set block at location -99.5, 16.5, 32.5 "world" to purple terracotta
+			set block at location -94.5, 14.5, 28.5 "world" to quartz bricks
+			set block at location -95.5, 14.5, 28.5 "world" to dark prismarine block
+			set block at location -96.5, 14.5, 28.5 "world" to quartz bricks
+			set block at location -97.5, 14.5, 28.5 "world" to quartz bricks
+			set block at location -98.5, 14.5, 28.5 "world" to quartz bricks
+
+			set block at location -94.5, 14.5, 27.5 "world" to quartz bricks
+			set block at location -95.5, 14.5, 27.5 "world" to quartz bricks
+			set block at location -96.5, 14.5, 27.5 "world" to quartz bricks
+			set block at location -97.5, 14.5, 27.5 "world" to prismarine bricks
+			set block at location -98.5, 14.5, 27.5 "world" to quartz bricks
+
+			set block at location -94.5, 14.5, 26.5 "world" to prismarine bricks
+			set block at location -95.5, 14.5, 26.5 "world" to quartz bricks
+			set block at location -96.5, 14.5, 26.5 "world" to prismarine bricks
+			set block at location -97.5, 14.5, 26.5 "world" to quartz bricks
+			set block at location -98.5, 14.5, 26.5 "world" to dark prismarine block
+
+			set block at location -94.5, 14.5, 25.5 "world" to quartz bricks
+			set block at location -95.5, 14.5, 25.5 "world" to dark prismarine block
+			set block at location -96.5, 14.5, 25.5 "world" to quartz bricks
+			set block at location -97.5, 14.5, 25.5 "world" to dark prismarine block
+			set block at location -98.5, 14.5, 25.5 "world" to quartz bricks
+
+			set block at location -94.5, 14.5, 24.5 "world" to quartz bricks
+			set block at location -95.5, 14.5, 24.5 "world" to quartz bricks
+			set block at location -96.5, 14.5, 24.5 "world" to sea lantern
+			set block at location -97.5, 14.5, 24.5 "world" to quartz bricks
+			set block at location -98.5, 14.5, 24.5 "world" to prismarine bricks
