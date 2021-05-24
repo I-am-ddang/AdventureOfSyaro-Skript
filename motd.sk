@@ -1,0 +1,2 @@
+server ping:
+	set motd to "&6&l               샤로의 모험%nl%&f           Minecraft Adventure Map &7[1.16.4-1.16.5]"

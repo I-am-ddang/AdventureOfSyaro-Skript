@@ -27,3 +27,8 @@ inventory click:
 			if {game::%player%} is 5:
 				set {game::%player%} to 6
 			send title ":: 평범한 초원 ::" with subtitle "" to player for 2 seconds
+		if name of clicked slot is "&a폐허":
+			teleport player to location(-125.5, 3.5, -15.5, player's world, -91.6, 0.4)
+			if {game::%player%} is 7:
+				set {game::%player%} to 8
+			send title ":: 폐허 ::" with subtitle "" to player for 2 seconds
