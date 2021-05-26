@@ -14,7 +14,7 @@ inventory click:
 			set slot 1 of {_a} to grass block named "&a평범한 초원" with lore "&7도서관 바로 앞에도 있는 평범한 초원입니다."
 			set slot 3,5 and 7 of {_a} to iron bars named "&c찾지 못한 지역" with lore "&7아직 찾지 못한 지역입니다."
 			if {item::%player%::1::1} is true:
-				set slot 3 of {_a} to purple terracotta named "&a폐허" with lore "&7이제는 발길이 닿지 않는 외딴 지역입니다."
+				set slot 3 of {_a} to purple terracotta named "&a폐허" with lore "&7이제는 발길이 닿지 않는 외딴 지역입니다." and "" and "&c들어갈때마다 퍼즐이 초기화됩니다." and "&c여러명이서 플레이할 때 유의하세요."
 			if {item::%player%::1::2} is true:
 				set slot 5 of {_a} to pufferfish named "&a현자 복어의 집" with lore "&7아주 현명한 현자 복어가 살고 있는 집입니다."
 			if {item::%player%::1::3} is true:
