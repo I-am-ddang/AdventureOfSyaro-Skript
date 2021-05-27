@@ -22,6 +22,12 @@ inventory click:
 			open {_a} to player
 	if name of top inventory of player is "어디를 갈까?":
 		cancel event
+		if name of clicked slot is "&a현자 복어의 집":
+			teleport player to location(137.5, 10.5, 2.5, player's world, -88.5, 2.5)
+			send title ":: 현자 복어의 집 ::" with subtitle "" to player for 2 seconds
+			set {score::%player%} to 0
+			if {game::%player%} is 9:
+				set {game::%player%} to 10
 		if name of clicked slot is "&a평범한 초원":
 			teleport player to location(-55.5, 9.5, -12.5, player's world, 0.8, 3.6)
 			if {game::%player%} is 5:

@@ -1,5 +1,4 @@
 right click on player head:
-	send "%location of block%" to player
 	if "%location of block%" is "x: -31.5, y: 20.5, z: 35.5":
 		send "&7이름 모를 현자의 혼: 영어 1단어 입니다." to player
 	if "%location of block%" is "x: -31.5, y: 18.5, z: 35.5":
