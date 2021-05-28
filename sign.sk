@@ -18,6 +18,7 @@ right click on sign:
 		clear {game::%player%}
 		clear {jelly::%player%}
 		clear {score::%player%}
+		clear {door::%player%}
 		story1(player)
 	else if line 1 is "크레딧 보기":
 		set {_a} to chest inventory with 1 rows named "크레딧"

@@ -1,6 +1,3 @@
-command /a:
-	trigger:
-		send "%type of target block%" to player
 
 right click on lodestone:
 	play sound "block.stone_button.click_on" at pitch 2 for player
@@ -313,7 +310,6 @@ left click on red carpet:
 		close player's inventory
 
 step on beacon:
-	"%location of block%" is "x: -96.5, y: 14.5, z: 15.5"
 	teleport player to location(-96.5, 15.5, 17.5, player's world, -0.1, -4.1)
 
 step on purple wool:

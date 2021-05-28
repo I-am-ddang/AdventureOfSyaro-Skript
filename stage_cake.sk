@@ -66,6 +66,7 @@ inventory click:
 			kill player
 
 click on cake:
+	cancel event
 	teleport player to location(-25.5, 18.5, 163.5, player's world)
 	send title "&fEND" with subtitle "샤로는 마법이 걸린 케이크를 먹고 그만 정신을 잃고 말았어요" to player for 2 seconds with fade in 10 seconds with fade out 3 seconds
 	wait 15 seconds
