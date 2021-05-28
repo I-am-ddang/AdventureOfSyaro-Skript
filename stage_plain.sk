@@ -6,9 +6,6 @@ step on red stained glass or orange stained glass:
 	damage player by 3
 	teleport player to location(-77.5, 12.5, -15.5, player's world, -1, 1)
 
-step on bedrock:
-	damage player by 1
-
 step on cyan terracotta:
 	if "%location of block%" is "x: -55.5, y: 4.5, z: -13.5":
 		teleport player to location(-77.5, 12.5, -15.5, player's world)
@@ -27,7 +24,7 @@ step on beacon:
 			send "&f샤로: 할아버지! 평범한 초원을 가봤어요!" to player
 			play sound "block.note_block.pling" at pitch 2 for player
 			wait 4 seconds
-			send "&f할아버지: 오오 대견하구나.. 평범한 초원이라.. 움직이는 기반암을 만났겠구나" to player
+			send "&f할아버지: 오오 대견하구나.. 평범한 초원이라.. 점프맵을 만났겠구나" to player
 			play sound "block.note_block.pling" at pitch 2 for player
 			wait 4 seconds
 			send "&f샤로: 네 그리고 잘 이겨내서 다시 왔어요." to player
@@ -42,3 +39,28 @@ step on beacon:
 			wait 4 seconds
 			send "&6여행용 지도를 사용해 이야기를 진행해주세요" to player
 			play sound "block.note_block.pling" at pitch 2 for player
+
+
+every 10 ticks:
+	if block at location at -46.5, 13.5, 131.5 "world" is not air:
+		set blocks within location(-45.5, 13.5, 132.5, world "world") and location(-65.5, 13.5, 130.5, world "world") to air
+	else:
+		set blocks within location(-45.5, 13.5, 132.5, world "world") and location(-65.5, 13.5, 130.5, world "world") to white wool
+	if block at location at -46.5, 10.5, 125.5 "world" is not air:
+		set blocks within location(-45.5, 10.5, 126.5, world "world") and location(-65.5, 10.5, 123.5, world "world") to air
+	else:
+		set blocks within location(-45.5, 10.5, 126.5, world "world") and location(-65.5, 10.5, 123.5, world "world") to white wool
+	if block at location at -46.5, 8.5, 119.5 "world" is not air:
+		set blocks within location(-45.5, 8.5, 121.5, world "world") and location(-65.5, 8.5, 119.5, world "world") to air
+	else:
+		set blocks within location(-45.5, 8.5, 121.5, world "world") and location(-65.5, 8.5, 119.5, world "world") to white wool
+	if block at location at -46.5, 5.5, 113.5 "world" is not air:
+		set blocks within location(-45.5, 5.5, 115.5, world "world") and location(-65.5, 5.5, 113.5, world "world") to air
+	else:
+		set blocks within location(-45.5, 5.5, 115.5, world "world") and location(-65.5, 5.5, 113.5, world "world") to white wool
+	
+
+command /asdf <text>:
+	trigger:
+		set {s::%player%} to arg 1
+		send "%{s::%player%}%로 설정됨" to player

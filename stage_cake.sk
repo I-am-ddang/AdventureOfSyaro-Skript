@@ -1,0 +1,75 @@
+click on player head:
+	if "%location of block%" is "x: -12.5, y: 1.5, z: 77.5":
+		if metadata tag "talking" of player is set:
+			stop
+		if metadata tag "talking2" of player is set:
+			send "&7현자 젤리의 혼: 호호" to player
+			play sound "block.note_block.pling" at pitch 2 for player
+			stop
+		set metadata tag "talking" of player to true
+		send "&7현자 젤리의 혼: 후.." to player
+		play sound "block.note_block.pling" at pitch 2 for player
+		wait 1.5 seconds
+		send "&7현자 젤리의 혼: 추 가루" to player
+		play sound "block.note_block.pling" at pitch 2 for player
+		wait 1.5 seconds
+		send "샤로: ???" to player
+		play sound "block.note_block.pling" at pitch 2 for player
+		wait 3 seconds
+		send "&7현자 젤리의 혼: 이 안으로 들어가고 싶나보구나" to player
+		play sound "block.note_block.pling" at pitch 2 for player
+		wait 3 seconds
+		send "샤로: 네 근데 문이 잠겨져 있는데 어쩌죠?"
+		play sound "block.note_block.pling" at pitch 2 for player
+		wait 3 seconds
+		send "&7현자 젤리의 혼: 사실 꿀팁을 하나 주자면, 여기가 입구가 아니야" to player
+		play sound "block.note_block.pling" at pitch 2 for player
+		wait 3 seconds
+		send "샤로: 앗 감사합니다" to player
+		play sound "block.note_block.pling" at pitch 2 for player
+		wait 3 seconds
+		send "&6입구를 찾아보자" to player
+		play sound "block.note_block.pling" at pitch 2 for player
+		wait 3 seconds
+		set metadata tag "talking2" of player to true
+		clear metadata tag "talking" of player
+
+
+click on dried kelp block:
+	send "&7&o  문이 굳게 잠겨있다.." to player
+
+step on smooth stone slab:
+	set {_a} to chest inventory with 1 rows named "엘리베이터"
+	set slot 2 of {_a} to iron door named "&a2층으로 가기" with lore "&7엘리베이터를 작동시킵니다" and "" and "&e클릭시 이동합니다"
+	set slot 3 of {_a} to iron door named "&a3층으로 가기" with lore "&7엘리베이터를 작동시킵니다" and "" and "&e클릭시 이동합니다"
+	set slot 4 of {_a} to iron door named "&a4층으로 가기" with lore "&7엘리베이터를 작동시킵니다" and "" and "&e클릭시 이동합니다"
+	set slot 5 of {_a} to iron door named "&a지하 1층으로 가기" with lore "&7엘리베이터를 작동시킵니다" and "" and "&e클릭시 이동합니다"
+	set slot 6 of {_a} to iron door named "&a최하층으로 가기" with lore "&7엘리베이터를 작동시킵니다" and "" and "&e클릭시 이동합니다"
+	open {_a} to player
+
+inventory click:
+	name of player's top inventory is "엘리베이터"
+	cancel event
+	if index of clicked slot is 2,3,4,5 or 6:
+		if name of clicked slot contain "최하층":
+			teleport player to location(2.5, 2.5, 103.5, player's world, -177.5, 3.5)
+			stop
+		else:
+			teleport player to location(-25.5, 18.5, 163.5, player's world)
+			wait 2 seconds
+			send title "" with subtitle "덜컹거리는 소리와 함께 엘리베이터가 크게 흔들렸고" to player for 2 seconds
+			wait 3.5 seconds
+			send title "" with subtitle "샤로는 이윽고 자신이 잘못된 선택을 한 걸 깨달았다." to player for 2 seconds
+			wait 3.5 seconds
+			send title "" with subtitle "&7&o초반 할아버지가 하신 말씀은 케이크는 거기에 있다고 했어" to player for 2 seconds
+			wait 3.5 seconds
+			kill player
+
+click on cake:
+	teleport player to location(-25.5, 18.5, 163.5, player's world)
+	send title "&fEND" with subtitle "샤로는 마법이 걸린 케이크를 먹고 그만 정신을 잃고 말았어요" to player for 2 seconds with fade in 10 seconds with fade out 3 seconds
+	wait 15 seconds
+	reset title
+	send title "" with subtitle "&d샤로(_Syaro)님 늦었지만 생일 축하드립니다 05.22" to player for 2 seconds
+	wait 5 seconds
+	kill player

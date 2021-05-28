@@ -286,7 +286,6 @@ click on shulker box:
 			send "&7문이 열렸다." to player
 
 right click on crimson door:
-	send "%location of block%" to player
 	if "%location of block%" is "x: -92.5, y: 7.5, z: -16.5" or "x: -92.5, y: 7.5, z: -15.5" or "x: -92.5, y: 6.5, z: -15.5" or "x: -92.5, y: 6.5, z: -16.5":
 		cancel event
 		if {door::%player%} is not set:

@@ -17,6 +17,7 @@ right click on sign:
 		clear {item::%player%::*}
 		clear {game::%player%}
 		clear {jelly::%player%}
+		clear {score::%player%}
 		story1(player)
 	else if line 1 is "크레딧 보기":
 		set {_a} to chest inventory with 1 rows named "크레딧"
@@ -28,9 +29,9 @@ right click on sign:
 		set slot 5 of {_a} to head of "gangjisu123" parsed as offlineplayer named "&aGangjisu123" with lore "&f  평범한 초원길 검수" and "&f  제작 보조"
 		set slot 6 of {_a} to head of "siyun1211" parsed as offlineplayer named "&asiyun1211" with lore "&f  할아버지의 수수께끼방 장식을 맡음" and "&f  제작 보조"
 		set slot 7 of {_a} to head of "ke_vini" parsed as offlineplayer named "&ake_vini" with lore "&f  할아버지의 수수께끼방 장식을 맡음" and "&f  제작 보조"
+		set slot 8 of {_a} to head of "kqmado" parsed as offlineplayer named "&akqmado" with lore "&f 도서관 건축 도움" and "&f 귀요미 자유 올림이라고 적어달라고 요청"
 		open {_a} to player
 	else if line 1 is "비석":
-		send "%location of block%" to player
 		if "%location of block%" is "x: -57.5, y: 10.5, z: -12.5":
 			send "&7멀리 가야할 땐 돌아가는 것도 좋은 방법이다." to player
 		if "%location of block%" is "x: -94.5, y: 2.5, z: 15.5":
